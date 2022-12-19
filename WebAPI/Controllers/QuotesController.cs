@@ -7,7 +7,7 @@ namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class QuotesController:ControllerBase
+    public class QuotesController : ControllerBase
     {
         private readonly DemoApiContext _context;
 
@@ -19,6 +19,12 @@ namespace WebAPI.Controllers
         public List<Quote> GetQuotes()
         {
             return _context.Quotes.ToList();
+        }
+        [HttpGet("{id}")]
+        public ActionResult<Quote> GetQuote(int id)
+        {
+            var quote = _context.Quotes.FirstOrDefault(x => x.Id == id);
+            return quote;
         }
     }
 }
