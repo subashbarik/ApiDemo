@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/DemoWebAPIapiMgnt/apis/cvdemoapi",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/codeventurer/databases/demodb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DemoApiContext",
+      "dynamicId": null
+    }
+  }
+}
