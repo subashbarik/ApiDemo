@@ -12,6 +12,7 @@ namespace ApiDemoUnitTests
             //Act
 
             //Assert
+            Assert.NotEqual(expected, actual);
             Assert.Equal(expected, actual);
         }
 
