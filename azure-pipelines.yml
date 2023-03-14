@@ -33,7 +33,7 @@ steps:
     command: 'publish'
     publishWebProjects: true
     arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
-- task:PublishCodeCoverageResults@2
+- task:PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool:'Cobertura'
     summaryFileLocation:'**/*coverage.cobertura.xml'
