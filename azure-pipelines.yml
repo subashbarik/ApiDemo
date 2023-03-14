@@ -32,7 +32,7 @@ steps:
   inputs:
     command: custom
     custom: tool
-    arguments: dotnet tool install --global dotnet-coverage
+    arguments: install --tool-path . dotnet-coverage-globaltool
   displayName: Install Coverage tool
 - task: DotNetCoreCLI@2
   inputs:
