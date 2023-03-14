@@ -13,22 +13,22 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreCLI@2
+- task: Restore@2
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
     feedsToUse: 'select'
-- task: DotNetCoreCLI@2
+- task: Build@2
   inputs:
     command: 'build'
     projects: '**/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
-- task: DotNetCoreCLI@2
+- task: Test@2
   inputs:
     command: 'test'
     projects: '**/*Tests.csproj'
     arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
-- task: DotNetCoreCLI@2
+- task: Publish@2
   inputs:
     command: 'publish'
     publishWebProjects: true
