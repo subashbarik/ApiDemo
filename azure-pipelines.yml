@@ -32,8 +32,8 @@ steps:
   inputs:
     command: custom
     custom: tool
-    arguments: install --tool-path . dotnet-reportgenerator-globaltool
-  displayName: Install ReportGenerator tool
+    arguments: dotnet tool install --global dotnet-coverage
+  displayName: Install Coverage tool
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
